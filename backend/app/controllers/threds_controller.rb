@@ -30,7 +30,7 @@ class ThredsController < ApplicationController
     @post.post_num = @board.post_count
 
     if @post.save
-      render json: @thred, status: :created, location: @thred
+      render json: @thred, status: :created, location: board_thred_url(@board.path, @thred.post_num)
     else
       render json: @post.errors, status: :unprocessable_entity
     end

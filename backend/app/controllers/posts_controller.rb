@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     @post.post_num = @board.post_count
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created, location: board_thred_post_url(@board.path, @thred.post_num, @post.post_num)
     else
       render json: @post.errors, status: :unprocessable_entity
     end

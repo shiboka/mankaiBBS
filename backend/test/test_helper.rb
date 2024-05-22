@@ -20,12 +20,23 @@ module ActiveSupport
       @board = Board.new
       @board.name = "test"
       @board.path = "test"
+      @board.post_count = 1
       @board.save
   
       @thred = Thred.new
       @thred.subject = "test"
+      @thred.post_num = 1
       @thred.board = @board
       @thred.save
+
+      @post = Post.new
+      @post.name = "test"
+      @post.message = "test"
+      @post.post_num = 1
+      @post.thred = @thred
+      @post.save
+
+      p "POSTS:", @thred.posts
     end
   end
 end

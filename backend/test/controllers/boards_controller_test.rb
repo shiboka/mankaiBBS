@@ -21,19 +21,19 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show board" do
-    get board_url(@board), headers: { "Authorization": "Bearer #{@token}" }, as: :json
+    get board_url(@board.path), headers: { "Authorization": "Bearer #{@token}" }, as: :json
     assert_response :success
   end
 
   test "should update board" do
-    patch board_url(@board), headers: { "Authorization": "Bearer #{@token}" },
+    patch board_url(@board.path), headers: { "Authorization": "Bearer #{@token}" },
       params: { board: { name: "test2", path: "test2" } }, as: :json
     assert_response :success
   end
 
   test "should destroy board" do
     assert_difference("Board.count", -1) do
-      delete board_url(@board), headers: { "Authorization": "Bearer #{@token}" }, as: :json
+      delete board_url(@board.path), headers: { "Authorization": "Bearer #{@token}" }, as: :json
     end
 
     assert_response :no_content
