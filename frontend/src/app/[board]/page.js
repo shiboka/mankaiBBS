@@ -21,9 +21,9 @@ export default async function Page({ params }) {
       {index.map((thred) => (
         <div className="thread">
           <PostOp key={thred.posts[0].id} board={board.path} subject={thred.subject} post={thred.posts[0]} index={true} />
-            {thred.posts.slice(1).map((post) => (
-              <PostReply key={post.id} post={post} />
-            ))}
+          {thred.posts.slice(1).map((post) => (
+            <PostReply key={post.id} post={post} />
+          ))}
         </div>
       ))}
     </>
