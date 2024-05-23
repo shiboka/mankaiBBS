@@ -2,7 +2,7 @@ require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    setup_variables
+    setup_auth
   end
 
   test "should get index" do

@@ -3,7 +3,4 @@
 one:
   name: MyString
   path: MyString
-
-two:
-  name: MyString
-  path: MyString
+  post_count: 1

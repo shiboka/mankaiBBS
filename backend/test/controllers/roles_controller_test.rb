@@ -2,8 +2,8 @@ require "test_helper"
 
 class RolesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    setup_variables
-    @role = roles(:one)
+    setup_auth
+    @role = roles(:admin)
   end
 
   test "should get index" do

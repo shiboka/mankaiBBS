@@ -2,7 +2,10 @@ require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    setup_variables
+    setup_auth
+    @board = boards(:one)
+    @thred = threds(:one)
+    @post = posts(:one)
   end
 
   test "should get index" do

@@ -3,7 +3,5 @@
 one:
   name: MyString
   message: MyText
-
-two:
-  name: MyString
-  message: MyText
+  post_num: 1
+  thred: one

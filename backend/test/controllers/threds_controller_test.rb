@@ -2,7 +2,9 @@ require "test_helper"
 
 class ThredsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    setup_variables
+    setup_auth
+    @board = boards(:one)
+    @thred = threds(:one)
   end
 
   test "should get index" do

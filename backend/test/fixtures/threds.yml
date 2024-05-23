@@ -2,6 +2,5 @@
 
 one:
   subject: MyString
-
-two:
-  subject: MyString
+  post_num: 1
+  board: one
